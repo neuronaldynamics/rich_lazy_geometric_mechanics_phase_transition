@@ -1,0 +1,58 @@
+We show that the rich–lazy crossover in deep tanh networks can be understood as a gain-controlled, non-equilibrium geometric transition in the learned input-space deformation. In the lazy regime, training remains close to the initialization geometry, FTLE ridges are not boundary-anchored, and the correlation between maximal FTLE and adversarial margin is near zero. In the rich regime, training reorganizes the feature map so that maximal stretching localizes at the decision boundary and its principal direction aligns with the boundary normal, driving the FTLE–margin correlation toward −1. As the initialization gain g decreases, the intermediate crossover narrows and becomes increasingly step-like across the ensemble of training runs, consistent with a finite-size-rounded, first-order-like dynamical phase transition between lazy and rich learning.
+
+
+If we want a slightly safer version for a first submission, I’d soften just one phrase:
+
+... consistent with a sharp, gain-controlled non-equilibrium crossover, and suggestive of a finite-size-rounded first-order-like transition between lazy and rich learning.
+
+If we want a slightly more ML-facing version:
+
+We identify boundary-anchored maximal stretching as a geometric order parameter for the kernel-to-feature-learning crossover. Rich learning occurs when the classifier recruits maximal stretching to realize the class boundary; lazy learning occurs when stretching remains decoupled from the boundary geometry. Decreasing initialization gain sharply collapses the intermediate regime, making the crossover increasingly step-like across seeds.
+
+
+
+
+
+
+
+
+
+
+
+
+“Boundary-anchored stretching is a geometric mechanism and order parameter for the rich–lazy crossover.”
+
+We identify boundary-anchored maximal stretching as a geometric marker of feature learning, and show that the rich–lazy crossover can be tracked by the coupling between FTLE geometry and adversarial margin.
+
+The geometric order parameter exhibits a gain-controlled sharpening crossover, suggestive of a non-equilibrium dynamical phase transition in the ensemble of training trajectories.
+
+Title-level story
+
+Boundary-anchored stretching as a geometric order parameter for the rich–lazy learning crossover
+
+Abstract-level second sentence
+
+The crossover sharpens as initialization gain decreases, suggesting a gain-controlled non-equilibrium phase-transition-like behavior in the ensemble of training trajectories.
+
+
+If we aim at a physics/stat mech / Chaos / PRL-like audience, then the phase-transition framing can be the lead story if we add:
+
+- per-seed histograms,
+
+- susceptibility,
+
+- finite-size sharpening,
+
+- and ideally some time-resolved “switching on” evidence.
+
+If we aim at ICML / NeurIPS / ICLR / COLT-ish audiences, I think the better lead is:
+
+- new geometric order parameter
+
+- mechanism for when feature learning turns on
+
+- robustness consequences
+
+and then present the phase-transition interpretation as a strong discussion/result section rather than the only thesis.
+
+"we discovered the geometric mechanism that distinguishes rich from lazy learning, and this mechanism undergoes a gain-controlled sharpening crossover that looks phase-transition-like,” rather than, “we found a phase transition"
