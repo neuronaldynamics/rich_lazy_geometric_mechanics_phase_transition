@@ -1,0 +1,1 @@
+job_id,dataset,width,depth,gain,lr,batch_size,max_epochs,seed,train_state,eval_state,plots_state,final_train_acc,final_test_acc,best_test_acc,rho_all,rho_unsat,number_correct,number_eval_samples,updated_at

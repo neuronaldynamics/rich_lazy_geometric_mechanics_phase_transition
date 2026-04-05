@@ -1,0 +1,32 @@
+experiment_name: seed_stability_baseline
+dataset: mnist
+
+sweep:
+  width: [20]
+  depth: [4]
+  gain: [1.0]
+  lr: [0.05]
+  seed: [0, 1, 2, 3, 4]
+
+train:
+  batch_size: 8192
+  max_epochs: 500
+  target_test_acc: 0.97
+
+eval:
+  eps_hi: 0.3
+  pgd_steps: 20
+  bisection_iters: 10
+  eval_subset: 2000
+  ftle_batch_size: 64
+  margin_batch_size: 256
+  projection_method: pca
+  projection_points: 5000
+
+plots:
+  run: false
+  bins: 20
+
+runtime:
+  skip_finished: true
+  continue_on_error: true
